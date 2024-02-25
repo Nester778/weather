@@ -23,11 +23,23 @@ export default function MainPage() {
     const start = formatDate(twoDaysAgo);
     const end = formatDate(currentDate);
 
-    const queryForecast = `http://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${location}&days=3`;
+    const queryForecast = `https://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${location}&days=3`;
     const queryHistory = `https://api.weatherapi.com/v1/history.json?key=${KEY}&q=${location}&dt=${start}&end_dt=${end}`;
 
     useEffect(() => {
         try {
+            fetch(queryHistory).then((response) => {
+                return response.json();
+            }).then((data) => {
+                if (data.error !== undefined) {
+                    setError(data.error);
+                }
+                else {
+                    setError(null);
+                    setWeatherHistoryData(setData(data));
+                }
+            })
+
             fetch(queryForecast).then((response) => {
                 return response.json();
             }).then((data) => {
@@ -39,8 +51,6 @@ export default function MainPage() {
             setError(error);
         }
     }, [location]);
-
-    console.log(error);
 
     const weatherData = weatherHistoryData.concat(weatherFutureData);
 

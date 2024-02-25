@@ -11,7 +11,7 @@ export default function Slider(prop) {
 
     const [page, setPage] = useState(0);
     const [smallPage, setSmallPage] = useState(0);
-    const [sizeCard, setSizeCard] = useState(1);
+    const [sizeCard, setSizeCard] = useState(2);
     const [pages, setPages] = useState([]);
     const [smallCardPages, setSmallCardPages] = useState([]);
 
