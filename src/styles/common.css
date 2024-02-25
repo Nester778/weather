@@ -1,0 +1,10 @@
+:root {
+    --bgGradient: linear-gradient(135deg, #d2c235, #d21c9b);
+    --bgMainGradient: linear-gradient(135deg, #d2c235, #d21c9b);
+    --text: #fff;
+}
+
+body {
+    font-family: "Work Sans";
+    color: var(--text);
+}

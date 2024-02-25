@@ -1,0 +1,44 @@
+.smallCard-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 35px;
+    grid-row-gap: 0px;
+}
+
+.smallCard {
+    background: var(--bgGradient);
+    min-width: 130px;
+    min-height: 130px;
+    padding: 20px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+}
+
+.smallCard img {
+    max-width: 64px;
+    max-height: 64px;
+}
+
+@media (max-width: 1024px) {
+    .smallCard-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 2fr;
+        grid-column-gap: 35px;
+        grid-row-gap: 35px;
+    }
+}
+
+@media (max-width: 500px) {
+    .smallCard-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 3fr;
+        grid-column-gap: 35px;
+        grid-row-gap: 35px;
+    }
+}

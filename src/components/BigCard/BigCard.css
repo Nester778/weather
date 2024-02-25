@@ -1,0 +1,142 @@
+#card-2 {
+    background: var(--bgMainGradient);
+}
+
+.bigCard {
+    background: var(--bgGradient);
+    border-radius: 30px;
+
+    min-width: 800px;
+    height: 450px;
+
+    padding: 40px;
+    margin: 0 50px;
+    transition: all 500ms ease;
+}
+
+.bigCard__title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bigCard__title-left {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.bigCard__title-left h2 {
+    line-height: 60px;
+}
+
+.bigCard__title-left img {
+    width: 24px;
+    height: 36px;
+}
+
+.bigCard__title-right {
+    display: flex;
+    align-items: center;
+}
+
+.bigCard__main {
+    margin: 65px 0;
+    display: flex;
+    column-gap: 90px;
+    justify-content: center;
+}
+
+.bigCard__main-img {
+    width: 120px;
+    height: 120px;
+}
+
+.bigCard__main-temp-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.bigCard__main-temp {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.bigCard__bottom {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.bigCard__bottom-item {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .bigCard {
+        min-width: 500px;
+        height: 550px;
+    }
+
+    .bigCard__main {
+        column-gap: 30px;
+    }
+
+    .bigCard__main h1 {
+        font-size: 51px;
+    }
+
+    .bigCard__bottom {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2fr;
+        grid-column-gap: 35px;
+        grid-row-gap: 35px;
+    }
+}
+
+@media (max-width: 500px) {
+    .bigCard {
+        min-width: 300px;
+        height: 710px;
+        padding: 20px;
+    }
+
+    .bigCard__title {
+        display: block;
+    }
+
+    .bigCard__main {
+        display: block;
+        margin: 30px 0;
+    }
+
+    .bigCard__main-temp-wrapper {
+        justify-content: center;
+    }
+
+    .bigCard__main h1 {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .bigCard__main-img-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bigCard__bottom-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bigCard__bottom {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 4fr;
+        grid-column-gap: 35px;
+        grid-row-gap: 35px;
+    }
+}
