@@ -28,18 +28,6 @@ export default function MainPage() {
 
     useEffect(() => {
         try {
-            fetch(queryHistory).then((response) => {
-                return response.json();
-            }).then((data) => {
-                if (data.error !== undefined) {
-                    setError(data.error);
-                }
-                else {
-                    setError(null);
-                    setWeatherHistoryData(setData(data));
-                }
-            })
-
             fetch(queryForecast).then((response) => {
                 return response.json();
             }).then((data) => {
